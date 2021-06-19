@@ -31,7 +31,6 @@ const Photo = ({
   const handleClick = (event) => {
     onClick(event, { photo, index });
   };
-
   return (
     <img
       key={key}

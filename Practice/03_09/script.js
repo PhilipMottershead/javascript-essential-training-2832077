@@ -16,6 +16,15 @@ const backpack = {
     left: 26,
     right: 26,
   },
+
+  setVolume: function (volume) {
+    this.volume = volume;
+  },
+
+  setColor: function (color) {
+    this.color = color;
+  },
+
   toggleLid: function (lidStatus) {
     this.lidOpen = lidStatus;
   },
