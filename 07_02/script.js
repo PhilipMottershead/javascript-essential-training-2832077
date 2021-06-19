@@ -6,5 +6,7 @@
 let item = "flashlight";
 
 const collection = ["Piggy", item, 5, true];
-
+collection[2] = 6;
+collection[9] = "at the end";
+console.log(collection[8]);
 console.log(collection);
