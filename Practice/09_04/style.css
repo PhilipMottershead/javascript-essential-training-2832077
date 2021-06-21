@@ -22,3 +22,8 @@ body {
   height: 6rem;
   background-color: hsl(0, 0%, 90%);
 }
+
+.blue {
+  border-color: brown;
+  border-width: 2em;
+}
