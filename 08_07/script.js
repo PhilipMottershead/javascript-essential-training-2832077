@@ -3,17 +3,25 @@
  * @link https://developer.mozilla.org/en-US/docs/Glossary/Function
  */
 
-const tipCalculator = () => {
-  let sum = 29.95;
-  let percentage = 18;
+const tipCalculator = (sum, percentage, curencySymbol, prefix) => {
   let tip = sum * (percentage / 100);
   let total = sum + tip;
-  console.log(`
-  Sum before tip: ${sum}
-  Tip percentage: ${percentage}%
-  Tip:            ${tip.toFixed(2)}
-  Total:          ${total.toFixed(2)}
-`);
+  if (prefix) {
+    console.log(`
+    Sum before tip: ${curencySymbol}${sum}
+    Tip percentage: ${percentage}%
+    Tip:            ${curencySymbol}${tip.toFixed(2)}
+    Total:          ${curencySymbol}${total.toFixed(2)}
+  `);
+  } else {
+    console.log(`
+    Sum before tip: ${sum}${curencySymbol}
+    Tip percentage: ${percentage}%
+    Tip:            ${tip.toFixed(2)}${curencySymbol}
+    Total:          ${total.toFixed(2)}${curencySymbol}
+  `);
+  }
 };
 
-tipCalculator();
+tipCalculator(29.95, 19, "$", false);
+tipCalculator(40, 19, "£", true);

@@ -23,5 +23,12 @@ const addPack = (currentPack) => {
   return newArticle;
 };
 
+const calcDate = () => {
+  let startDate = Date.parse("14 March 2021");
+  let endDate = Date.parse("14 June 2021");
+  return new Date(endDate - startDate);
+};
+console.log(Math.floor(calcDate() / (1000 * 60 * 60 * 24)));
+
 const main = document.querySelector("main");
 main.append(addPack(greenPack));

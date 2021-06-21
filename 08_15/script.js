@@ -9,10 +9,16 @@ const article = document.querySelector("article");
 let stuffList = document.createElement("ul");
 
 // forEach() array method
-stuff.forEach((item) => {
+const stuffItems = stuff.map((item) => {
   let listItem = document.createElement("li");
   listItem.innerHTML = item;
-  stuffList.append(listItem);
+  return listItem;
+});
+console.log("stuff:", stuff);
+console.log("stuffitems:", stuffItems);
+
+stuffItems.forEach((item) => {
+  stuffList.append(item);
 });
 
-article.append(stuffList)
+article.append(stuffList);
